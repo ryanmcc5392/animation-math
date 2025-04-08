@@ -1,14 +1,22 @@
 {
   "name": "animation-math",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["math", "utils", "clamp", "lerp", "typescript"],
+  "keywords": [
+    "math",
+    "utils",
+    "clamp",
+    "lerp",
+    "typescript"
+  ],
   "author": "Ryan McCallister",
   "license": "MIT",
   "description": "",
