@@ -106,8 +106,8 @@ export function cursorParallax(clientX: number, clientY: number, width: number, 
 */
 
 export function cursor3D(clientX: number, clientY: number, width: number, height: number) {
-  const cursorX = clientX / width - 0.5;
-  const cursorY = clientY / height - 0.5;
+  const cursorX = (clientX / width) * 2 - 1;
+  const cursorY = -(clientY / height) * 2 + 1;
   return {x: cursorX, y: cursorY};
 }
 
