@@ -20,9 +20,9 @@ export class Clock {
     const now = performance.now();
     this.delta = (now - this.lastTime) / 1000;
     this.lastTime = now;
-
-    // Update FPS on every frame
-    this.fps = 1 / this.delta;
+  
+    // Updates FPS on every frame
+    this.fps = this.delta > 0 ? 1 / this.delta : 0;
     return this.delta;
   }
 
