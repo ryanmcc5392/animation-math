@@ -4,6 +4,10 @@ A tiny, dependency-free collection of utility functions for animation, easing, i
 
 ---
 
+[GitHub Repository](https://github.com/ryanmcc5392/animation-math)
+
+---
+
 ## 📐 Installation
 
 ```bash
