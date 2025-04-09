@@ -1,6 +1,8 @@
 export class Clock {
   private startTime: number;
   private lastTime: number;
+  private delta: number = 0;
+  private fps: number = 0;
 
   constructor() {
     const now = performance.now();
@@ -16,9 +18,17 @@ export class Clock {
   /** Time since last frame (updates internal state), in seconds */
   getDelta(): number {
     const now = performance.now();
-    const delta = (now - this.lastTime) / 1000;
+    this.delta = (now - this.lastTime) / 1000;
     this.lastTime = now;
-    return delta;
+
+    // Update FPS on every frame
+    this.fps = 1 / this.delta;
+    return this.delta;
+  }
+
+  /** Estimated current frames per second */
+  getFPS(): number {
+    return Math.round(this.fps);
   }
 
   /** Reset the clock */
@@ -26,5 +36,6 @@ export class Clock {
     const now = performance.now();
     this.startTime = now;
     this.lastTime = now;
+    this.fps = 0;
   }
 }
